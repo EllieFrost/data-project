@@ -1,0 +1,12 @@
+{
+	"name": "AzureSqlDWDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDWLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlDWTable",
+		"schema": []
+	}
+}
