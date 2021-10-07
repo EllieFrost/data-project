@@ -1,0 +1,16 @@
+{
+	"name": "AzureSqlDWLinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDW",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=ellieprojectworkspace.sql.azuresynapse.net;initial catalog=dedicatedpool;user id=sqladminuser",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhOGNkOWIyZC0yYmYzLTRhNTQtYTNmNi04NmU0NDY5NDkyZmEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "integrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
