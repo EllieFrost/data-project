@@ -1,0 +1,21 @@
+{
+	"name": "AzureStorageLinkedService",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Elliebloblinked",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "ellieprojectcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
