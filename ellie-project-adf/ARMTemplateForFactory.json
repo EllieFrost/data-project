@@ -151,7 +151,7 @@
 								"referenceName": "IterateAndCopySQLTables",
 								"type": "PipelineReference"
 							},
-							"waitOnCompletion": true,
+							"waitOnCompletion": false,
 							"parameters": {
 								"tablelist": {
 									"value": "@activity('Lookuptablelist').output",
