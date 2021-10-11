@@ -8,6 +8,9 @@
 		"AzureBlobStorageLinkedService_connectionString": {
 			"value": ""
 		},
+		"AzureBlobStoragewatermark_connectionString": {
+			"value": ""
+		},
 		"AzureSqlDWLinkedService_connectionString": {
 			"value": ""
 		},
@@ -27,9 +30,6 @@
 			"value": ""
 		},
 		"lswatermark_connectionString": {
-			"value": ""
-		},
-		"AzureBlobStoragewatermark_connectionString": {
 			"value": ""
 		},
 		"containerUri": {
