@@ -26,6 +26,12 @@
 		"LocalSQLServer_connectionString": {
 			"value": ""
 		},
+		"lswatermark_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStoragewatermark_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
