@@ -17,6 +17,9 @@
 		"AzureStorageLinkedService_connectionString": {
 			"value": ""
 		},
+		"Azuresqldatabasels1_connectionString": {
+			"value": ""
+		},
 		"Elliebloblinked_connectionString": {
 			"value": ""
 		},
