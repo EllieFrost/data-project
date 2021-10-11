@@ -37,7 +37,10 @@
 								},
 								"sink": {
 									"type": "SqlDWSink",
-									"preCopyScript": "IF EXISTS (SELECT * FROM [@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]) TRUNCATE TABLE [@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]\n",
+									"preCopyScript": {
+										"value": "IF EXISTS (SELECT * FROM [@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]) TRUNCATE TABLE [@{item().TABLE_SCHEMA}].[@{item().TABLE_NAME}]\n",
+										"type": "Expression"
+									},
 									"allowPolyBase": true,
 									"polyBaseSettings": {
 										"rejectValue": 0,
