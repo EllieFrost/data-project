@@ -42,7 +42,17 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"waitOnCompletion": true
+					"pipeline": {
+						"referenceName": "IterateAndCopySQLTables",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"tablelist": {
+							"value": "@activity('Lookuptablelist').output",
+							"type": "Expression"
+						}
+					}
 				}
 			}
 		],

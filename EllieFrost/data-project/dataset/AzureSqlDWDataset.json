@@ -5,12 +5,26 @@
 			"referenceName": "AzureSqlDWLinkedService",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"DWTableName": {
+				"type": "string"
+			},
+			"DWSchema": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlDWTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "@dataset().DWSchema",
-			"table": "@dataset().DWTableName"
+			"schema": {
+				"value": "@dataset().DWSchema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().DWTableName",
+				"type": "Expression"
+			}
 		}
 	}
 }
