@@ -1,0 +1,12 @@
+{
+	"name": "lswatermark",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=synapseserverellie.database.windows.net;initial catalog=data;user id=sqladminuser",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkVMTElFLVBST0pFQ1QtQURGXzMxNzI1OWNjLWJlN2QtNDYwYy1iZGU1LTA2OGIyM2E2M2Y2NiINCn0="
+		}
+	}
+}
