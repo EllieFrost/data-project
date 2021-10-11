@@ -41,7 +41,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureStorageLinkedService",
+						"referenceName": "AzureBlobDataset",
 						"type": "DatasetReference"
 					}
 				]
