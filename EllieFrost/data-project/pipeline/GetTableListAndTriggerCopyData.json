@@ -1,0 +1,51 @@
+{
+	"name": "GetTableListAndTriggerCopyData",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookuptablelist",
+				"description": "Retrieve the table list from my database\n",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT TABLE_SCHEMA, TABLE_NAME FROM information_schema.TABLES WHERE TABLE_TYPE = 'BASE TABLE' and TABLE_SCHEMA = 'SalesLT' and TABLE_NAME <> 'ProductModel'\n",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "AzureSqlDatabaseDataset",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "triggercopy",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Lookuptablelist",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": []
+	}
+}
