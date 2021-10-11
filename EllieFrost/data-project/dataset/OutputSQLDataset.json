@@ -1,0 +1,16 @@
+{
+	"name": "OutputSQLDataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azuresqldatabasels1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "",
+			"table": ""
+		}
+	}
+}
