@@ -1,0 +1,37 @@
+{
+	"name": "csv_movies_dynamic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Elliebloblinked",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Foldername": {
+				"type": "string"
+			},
+			"Delimitersymbol": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@dataset().Foldername",
+					"type": "Expression"
+				},
+				"container": "mssqltips"
+			},
+			"columnDelimiter": {
+				"value": "@dataset().Delimitersymbol",
+				"type": "Expression"
+			},
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
