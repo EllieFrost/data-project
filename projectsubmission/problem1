@@ -1,1 +1,2 @@
-
+git rm problem1.txt
+git commit -m "remove problem1.txt"
