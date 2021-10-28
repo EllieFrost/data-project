@@ -1,1 +1,2 @@
-
+git rm --cached projectdocumentation.txt
+git commit -m "remove projectdocumentation.txt"
